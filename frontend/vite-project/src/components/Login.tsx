@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
-
+import Navbar from './Navbar';
+import Cookies from 'js-cookie'
 const Login: React.FC = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
@@ -17,9 +18,14 @@ const Login: React.FC = () => {
                 password
             });
             console.log(response.data);
+            Cookies.set("authorisation", response.data.token);
             toast.info(response.data.message, { position: "top-right" });
             setEmail("");
             setPassword("");
+            setTimeout(()=>{
+                navigate("/BookShow")
+            },6000)
+            
         } catch (error) {
              console.error("Error during login:", error);
             //  toast.error(error.message, { position: "top-right" });
@@ -27,6 +33,7 @@ const Login: React.FC = () => {
     };
 
     return (
+        <><Navbar/>
         <div className="bg-gray-800 min-h-screen flex items-center justify-center p-9">
         <form onSubmit={handleSubmit} className="bg-blue-400 max-w-md w-full p-9 rounded-2xl space-y-4">
             <h1 className="text-grsy-900 font-bold text-2xl mb-4">Login</h1>
@@ -68,6 +75,7 @@ const Login: React.FC = () => {
         </form>
         <ToastContainer />
     </div>
+    </>
     );
 };
 

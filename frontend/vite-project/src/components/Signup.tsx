@@ -1,8 +1,11 @@
-import React, { FormEvent, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
+import Cookies from 'js-cookie'
+
 
 function Signup() {
     const [name, setName] = useState<string>(" ");
@@ -18,6 +21,7 @@ function Signup() {
             password,
         })
         console.log(response.data);
+        Cookies.set("authorisation", response.data.token);
         toast.info(response.data.message, { position: "top-right" });
         setName("")
         setEmail("")
@@ -29,6 +33,7 @@ function Signup() {
     }
   return (
     <>
+    <Navbar/>
     <div className="bg-gray-800 max-h-screen min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full bg-blue-400 p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4">Signup</h2>

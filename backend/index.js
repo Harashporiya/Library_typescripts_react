@@ -6,12 +6,30 @@ const router = require("./route/user")
 const User = require("./model/user")
 const bookRouter = require("./route/library")
 const cors = require("cors")
+const secretkey = "qwertyuioplkjhgfdsazxcvbnm";
+const jwt = require("jsonwebtoken")
+
+
 mongoose.connect("mongodb://127.0.0.1:27017/Library").
 then(()=>console.log("MongoDB Connected"))
 
-app.get("/user",async(req,res)=>{
-    return res.send("harash")
+
+app.get("/user/data", async(req,res)=>{
+    const token = req.header.authorisation
+    console.log(token)
+    if(!token){
+        return res.status(401).json({ error: "Unauthorised"})
+    }
+    try{
+        const decoded = jwt.verify(token,secretkey);
+        const{name,email} = await User.findOne({_id:decoded.userId})
+        res.json({ email: email, name, })
+    } catch (error) {
+        return res.status(401).json({ message: "Invalid token" })
+    }
 })
+
+
 app.use(cors());
 app.use(express.json())
 app.use("/user",router);
