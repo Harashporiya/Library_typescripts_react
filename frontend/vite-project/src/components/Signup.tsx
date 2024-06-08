@@ -35,7 +35,7 @@ function Signup() {
     <>
     <Navbar/>
     <div className="bg-gray-800 max-h-screen min-h-screen flex items-center justify-center">
-      <div className="max-w-md w-full bg-blue-400 p-6 rounded-lg shadow-md">
+      <div className="max-w-md w-full bg-blue-400 p-6 mb-28 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4">Signup</h2>
         <form onSubmit={handleSubmit}>
         <p className='mb-4 text-white font-semibold text-2xl'>Signup to create an account</p>
@@ -80,7 +80,7 @@ function Signup() {
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
-          <button type='submit' className="w-full bg-indigo-600 text-white font-bold text-xl py-2 px-4 rounded-md shadow-sm hover:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <button type='submit' className="bg-sky-600 font-bold text-xl p-4 w-full text-white rounded-xl hover:bg-sky-700">
             Signup
           </button>
         </form>

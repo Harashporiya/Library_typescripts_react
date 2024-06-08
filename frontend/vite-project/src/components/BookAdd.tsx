@@ -1,22 +1,23 @@
 import React, { FormEvent, useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import { addNewBooks, getAuthorisation } from '../ServiceAPI.tsx/ApiFetch';
+import { addNewBooks } from '../ServiceAPI.tsx/ApiFetch';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const BookAdd: React.FC = () => {
     const [bookName, setBookName] = useState<string>("");
     const [authorName, setAuthorName] = useState<string>("");
     const [imageUrl, setImageUrl] = useState<string>("");
-    const [data, setData] = useState(null);
+    const [userData, setUserData] = useState<any>(null);
 
-    const navigator = useNavigate();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        const token = Cookies.get("authorization");
+        const token = Cookies.get("authorisation");
 
         const newBook = { bookName, authorName, bookImageURL: imageUrl };
         try {
@@ -25,6 +26,7 @@ const BookAdd: React.FC = () => {
             setBookName("");
             setAuthorName("");
             setImageUrl("");
+            navigate("BookShow")
         } catch (error) {
             console.error("Error adding new book:", error);
         }
@@ -32,17 +34,27 @@ const BookAdd: React.FC = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const response = await getAuthorisation();
-                setData(response);
-            } catch (error) {
-                // navigator("/login");
-                console.error(error, "error");
+          try {
+            const token = Cookies.get("authorisation");
+            if (!token) {
+              navigate("/login");
+              return;
             }
-        }
+
+            const response = await axios.get("http://localhost:7000/user/data", {
+              headers: { authorisation: `Bearer ${token}` },
+            });
+
+            setUserData(response.data);
+            console.log(response.data);
+          } catch (error) {
+            // navigate("/login");
+            console.log("Error", error);
+          }
+        };
 
         fetchData();
-    }, [navigator]);
+    }, [navigate]);
 
     return (
         <>
@@ -92,8 +104,9 @@ const BookAdd: React.FC = () => {
                         </button>
                     </div>
                 </form>
+                <ToastContainer />
             </div>
-            <ToastContainer />
+            
         </>
     );
 };

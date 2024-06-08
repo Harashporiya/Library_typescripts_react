@@ -15,7 +15,7 @@ export const getBookAll =async()=>{
 export const addNewBooks = async (book: { bookName: string; authorName: string; bookImageURL: string }, token: string | undefined) => {
     try {
         const response = await axios.post(`${API_URL}book/add-new`, book, {
-            headers: { Authorisation: `Bearer ${token}` },
+            headers: { authorisation: `Bearer ${token}` },
         });
         return response.data;
     } catch (error) {
@@ -38,7 +38,7 @@ export const getAuthorisation = async () => {
     try {
         const token = Cookies.get("authorisation");
         const response = await axios.get(`${API_URL}user/data`, {
-            headers: { Authorisation: `Bearer ${token}` },
+            headers: { authorisation: token },
         });
         return response.data;
     } catch (error) {
