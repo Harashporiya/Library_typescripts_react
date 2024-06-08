@@ -29,4 +29,17 @@ router.get("/book/all", async(req,res)=>{
 })
 
 
+router.delete("/delete/:id",async(req,res)=>{
+    try{
+        const book = await Library.findByIdAndDelete(req.params.id);
+        if(!book){
+            return res.status(404).json({error:"Not Found!"})
+        }
+        return res.status(204).end();
+    }catch (err) {
+        console.error(err);
+        return res.status(500).json({ error: "Internal Server Error" });
+      }
+})
+
 module.exports = router;

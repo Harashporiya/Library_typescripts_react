@@ -17,7 +17,7 @@ const BookAdd: React.FC = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        const token = Cookies.get("authorisation");
+        const token = Cookies.get("authorization");
 
         const newBook = { bookName, authorName, bookImageURL: imageUrl };
         try {
@@ -35,14 +35,14 @@ const BookAdd: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const token = Cookies.get("authorisation");
+            const token = Cookies.get("authorization");
             if (!token) {
               navigate("/login");
               return;
             }
 
-            const response = await axios.get("http://localhost:7000/user/data", {
-              headers: { authorisation: `Bearer ${token}` },
+            const response = await axios.get("http://localhost:7000/data", {
+              headers: { authorization: `Bearer ${token}` },
             });
 
             setUserData(response.data);

@@ -21,7 +21,7 @@ function Signup() {
             password,
         })
         console.log(response.data);
-        Cookies.set("authorisation", response.data.token);
+        Cookies.set("authorization", response.data.token);
         toast.info(response.data.message, { position: "top-right" });
         setName("")
         setEmail("")

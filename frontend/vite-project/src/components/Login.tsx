@@ -6,6 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Cookies from 'js-cookie'
+
+
 const Login: React.FC = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
@@ -18,7 +20,7 @@ const Login: React.FC = () => {
                 password
             });
             console.log(response.data);
-            Cookies.set("authorisation", response.data.token);
+            Cookies.set("authorization", response.data.token);
             toast.info(response.data.message, { position: "top-right" });
             setEmail("");
             setPassword("");

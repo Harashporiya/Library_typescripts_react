@@ -37,7 +37,7 @@ export const getSignup = async (signup:{name:string;email:string;password:string
 export const getAuthorisation = async () => {
     try {
         const token = Cookies.get("authorisation");
-        const response = await axios.get(`${API_URL}user/data`, {
+        const response = await axios.get(`${API_URL}data`, {
             headers: { authorisation: token },
         });
         return response.data;

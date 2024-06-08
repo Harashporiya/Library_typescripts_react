@@ -14,11 +14,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/Library").
 then(()=>console.log("MongoDB Connected"))
 
 
-app.get("/user/data", async(req,res)=>{
-    const token = req.header.authorisation
+app.get("/data", async(req,res)=>{
+    const token = req.header.authorization
     console.log(token)
     if(!token){
-        return res.status(401).json({ error: "Unauthorised"})
+        return res.status(401).json({ error: "Unauthorized"})
     }
     try{
         const decoded = jwt.verify(token,secretkey);
