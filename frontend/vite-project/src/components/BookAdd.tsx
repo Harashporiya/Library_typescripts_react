@@ -1,6 +1,5 @@
 import React, { FormEvent, useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import { addNewBooks } from '../ServiceAPI.tsx/ApiFetch';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { ToastContainer, toast } from 'react-toastify';
@@ -17,44 +16,49 @@ const BookAdd: React.FC = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        const token = Cookies.get("authorization");
-
-        const newBook = { bookName, authorName, bookImageURL: imageUrl };
+        
         try {
-            const response = await addNewBooks(newBook, token);
-            toast.info(response.message, { position: "top-right" });
+            const token = Cookies.get("authorization");
+          
+
+            const response = await axios.post("http://localhost:7000/book/add-new", {
+                bookName,
+                authorName,
+                imageUrl,
+            }, {
+                headers: { authorization: `Bearer ${token}` },
+            });
+
+            toast.info(response.data.message, { position: "top-right" });
             setBookName("");
             setAuthorName("");
             setImageUrl("");
-            navigate("BookShow")
         } catch (error) {
             console.error("Error adding new book:", error);
+            toast.error("Failed to add the book. Please try again.", { position: "top-right" });
         }
     };
 
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            const token = Cookies.get("authorization");
-            if (!token) {
-              navigate("/login");
-              return;
+            try {
+                const token = Cookies.get("authorization");
+            
+               console.log(token)
+                const response = await axios.get("http://localhost:7000/data", {
+                    headers: { authorization: token },
+                });
+
+                setUserData(response.data);
+                // console.log(response.data.token)
+            } catch (error) {
+                console.log("Error", error);
+                navigate("/login");
             }
-
-            const response = await axios.get("http://localhost:7000/data", {
-              headers: { authorization: `Bearer ${token}` },
-            });
-
-            setUserData(response.data);
-            console.log(response.data);
-          } catch (error) {
-            // navigate("/login");
-            console.log("Error", error);
-          }
         };
 
         fetchData();
-    }, [navigate]);
+    }, []);
 
     return (
         <>
@@ -106,7 +110,6 @@ const BookAdd: React.FC = () => {
                 </form>
                 <ToastContainer />
             </div>
-            
         </>
     );
 };

@@ -15,8 +15,8 @@ then(()=>console.log("MongoDB Connected"))
 
 
 app.get("/data", async(req,res)=>{
-    const token = req.header.authorization
-    console.log(token)
+    const token = req.headers.authorization
+    // console.log(token)
     if(!token){
         return res.status(401).json({ error: "Unauthorized"})
     }

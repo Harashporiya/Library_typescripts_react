@@ -16,8 +16,6 @@ function Navbar() {
     const fetchData = async () => {
       const token = Cookies.get("authorization");
       
-    
-
       try {
         const response = await axios.get("http://localhost:7000/data", {
           headers: { authorization: token },
