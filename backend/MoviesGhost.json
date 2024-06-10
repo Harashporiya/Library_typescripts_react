@@ -1,0 +1,132 @@
+[
+    {
+        "title": "The Exorcist",
+        "director": "William Friedkin",
+        "release_date": "1973-12-26",
+        "genre": ["Horror"],
+        "rating": 8.0,
+        "description": "When a young girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her.",
+        "lead_actors": ["Ellen Burstyn", "Max von Sydow", "Linda Blair"],
+        "poster_image": "https://i.etsystatic.com/8315225/r/il/c8b039/504156603/il_570xN.504156603_q12m.jpg"
+    },
+    {
+        "title": "The Shining",
+        "director": "Stanley Kubrick",
+        "release_date": "1980-05-23",
+        "genre": ["Horror", "Drama"],
+        "rating": 8.4,
+        "description": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
+        "lead_actors": ["Jack Nicholson", "Shelley Duvall", "Danny Lloyd"],
+        "poster_image": "https://www.tallengestore.com/cdn/shop/products/TheShining-JackNicholson-StanleyKubrickClassicHorrorMovie-FanArt-HollywoodEnglishMoviePoster_65648c08-df57-4142-a14d-b803d139ae5b.jpg?v=1634645691"
+    },
+    {
+        "title": "Poltergeist",
+        "director": "Tobe Hooper",
+        "release_date": "1982-06-04",
+        "genre": ["Horror", "Thriller"],
+        "rating": 7.3,
+        "description": "A family's home is haunted by a host of demonic ghosts.",
+        "lead_actors": ["JoBeth Williams", "Heather O'Rourke", "Craig T. Nelson"],
+        "poster_image": "https://i.pinimg.com/736x/88/73/32/887332acbba76419418bb118bc611295.jpg"
+    },
+    {
+        "title": "The Conjuring",
+        "director": "James Wan",
+        "release_date": "2013-07-19",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 7.5,
+        "description": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.",
+        "lead_actors": ["Patrick Wilson", "Vera Farmiga", "Ron Livingston"],
+        "poster_image": "https://lh4.googleusercontent.com/proxy/yneC_gIjEpkNs_IxXJsSp2rig-Nrc3UfQqD-LAsvUujFEvYZU_eVdZtwrIT2YlHeXGrCEgS4bdcoEAawZzPkGW6nHIOK2iHffSjOsngsIA"
+    },
+    {
+        "title": "Insidious",
+        "director": "James Wan",
+        "release_date": "2010-09-14",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 6.8,
+        "description": "A family looks to prevent evil spirits from trapping their comatose child in a realm called The Further.",
+        "lead_actors": ["Patrick Wilson", "Rose Byrne", "Ty Simpkins"],
+        "poster_image": "https://miro.medium.com/v2/resize:fit:500/1*I9zDkUL5PfD7aT0O2Zk8mg.jpeg"
+    },
+    {
+        "title": "Paranormal Activity",
+        "director": "Oren Peli",
+        "release_date": "2007-10-14",
+        "genre": ["Horror", "Mystery"],
+        "rating": 6.3,
+        "description": "After moving into a suburban home, a couple becomes increasingly disturbed by a nightly demonic presence.",
+        "lead_actors": ["Katie Featherston", "Micah Sloat", "Mark Fredrichs"],
+        "poster_image": "https://c8.alamy.com/comp/2JGRTB6/movie-poster-30-nights-of-paranormal-activity-with-the-devil-inside-the-girl-with-the-dragon-tattoo-2013-2JGRTB6.jpg"
+    },
+    {
+        "title": "Annabelle",
+        "director": "John R. Leonetti",
+        "release_date": "2014-10-03",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 5.4,
+        "description": "A couple begins to experience terrifying supernatural occurrences involving a vintage doll shortly after their home is invaded by satanic cultists.",
+        "lead_actors": ["Ward Horton", "Annabelle Wallis", "Alfre Woodard"],
+        "poster_image": "https://images-cdn.ubuy.co.in/633b5f8369b4e511c4660fed-ata-boy-annabelle-alternate-movie-poster.jpg"
+    },
+    {
+        "title": "Annabelle: Creation",
+        "director": "David F. Sandberg",
+        "release_date": "2017-08-11",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 6.5,
+        "description": "Twelve years after the tragic death of their little girl, a dollmaker and his wife welcome a nun and several girls from a shuttered orphanage into their home, where they soon become the target of the dollmaker's possessed creation, Annabelle.",
+        "lead_actors": ["Anthony LaPaglia", "Samara Lee", "Miranda Otto"],
+        "poster_image": "https://i.pinimg.com/736x/df/ab/4a/dfab4a1f74035d29f5299f947aa48584.jpg"
+    },
+    {
+        "title": "Annabelle Comes Home",
+        "director": "Gary Dauberman",
+        "release_date": "2019-06-26",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 5.9,
+        "description": "While babysitting the daughter of Ed and Lorraine Warren, a teenager and her friend unknowingly awaken an evil spirit trapped in a doll.",
+        "lead_actors": ["Vera Farmiga", "Patrick Wilson", "Mckenna Grace"],
+        "poster_image": "https://m.media-amazon.com/images/I/81Mtbq9T8EL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "The Conjuring 2",
+        "director": "James Wan",
+        "release_date": "2016-06-10",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 7.3,
+        "description": "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
+        "lead_actors": ["Patrick Wilson", "Vera Farmiga", "Madison Wolfe"],
+        "poster_image": "https://usustatesman.com/wp-content/uploads/2016/06/the-conjuring-2-poster.jpg"
+    },
+    {
+        "title": "The Nun",
+        "director": "Corin Hardy",
+        "release_date": "2018-09-07",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 5.3,
+        "description": "A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania and confront a malevolent force in the form of a demonic nun.",
+        "lead_actors": ["Demián Bichir", "Taissa Farmiga", "Jonas Bloquet"],
+        "poster_image": "https://m.media-amazon.com/images/M/MV5BY2RkZGUzNmUtM2JlYi00ZDVhLWE2NTEtMzZjYWE2YjNmMzIwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+    },
+    {
+        "title": "The Curse of La Llorona",
+        "director": "Michael Chaves",
+        "release_date": "2019-04-19",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 5.2,
+        "description": "Ignoring the eerie warning of a troubled mother suspected of child endangerment, a social worker and her own small kids are soon drawn into a frightening supernatural realm.",
+        "lead_actors": ["Linda Cardellini", "Raymond Cruz", "Patricia Velasquez"],
+        "poster_image":"https://image.tmdb.org/t/p/original/z7VJFJQsShHbBNq1o5pFYA4og7L.jpg"
+    },
+    {
+        "title": "The Conjuring: The Devil Made Me Do It",
+        "director": "Michael Chaves",
+        "release_date": "2021-06-04",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "rating": 6.3,
+        "description": "The Warrens investigate a murder that may be linked to a demonic possession.",
+        "lead_actors": ["Patrick Wilson", "Vera Farmiga", "Ruairi O'Connor"],
+        "poster_image": "https://image.tmdb.org/t/p/original/6fXOKizBpQBCxRZMU1AWYHObFRk.jpg"
+    }
+]

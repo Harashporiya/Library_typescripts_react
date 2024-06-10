@@ -7,6 +7,8 @@ import BookAdd from './BookAdd';
 import BookShow from './BookShow';
 import Navbar from './Navbar';
 import MoviesIndia from './MoviesIndia';
+import MoviesGhost from './MoviesGhost';
+import Movies from './Movies';
 
 function AppRoutes() {
   return (
@@ -18,7 +20,9 @@ function AppRoutes() {
         <Route path='/BookAdd' element={<BookAdd/>}/>
         <Route path='/BookShow' element={<BookShow/>}/>
         <Route path='/Navbar' element={<Navbar/>}/>
-        <Route path='/movies' element={<MoviesIndia/>}/>
+        <Route path='movies' element={<Movies/>}/>
+        <Route path='/indiamovies' element={<MoviesIndia/>}/>
+        <Route path='/ghost' element={<MoviesGhost/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -9,12 +9,18 @@ const cors = require("cors")
 const secretkey = "qwertyuioplkjhgfdsazxcvbnm";
 const jwt = require("jsonwebtoken")
 const movies_india = require("./MoviesJsonData.json")
+const movies_ghost = require("./MoviesGhost.json")
+
 
 mongoose.connect("mongodb://127.0.0.1:27017/Library").
 then(()=>console.log("MongoDB Connected"))
 
 app.get("/api/movies", cors(), (req,res)=>{
     return res.json(movies_india)
+})
+
+app.get("/api2/movies", cors(), (req,res)=>{
+    return res.json(movies_ghost)
 })
 
 app.get("/data", async(req,res)=>{
