@@ -8,11 +8,14 @@ const bookRouter = require("./route/library")
 const cors = require("cors")
 const secretkey = "qwertyuioplkjhgfdsazxcvbnm";
 const jwt = require("jsonwebtoken")
-
+const movies_india = require("./MoviesJsonData.json")
 
 mongoose.connect("mongodb://127.0.0.1:27017/Library").
 then(()=>console.log("MongoDB Connected"))
 
+app.get("/api/movies", cors(), (req,res)=>{
+    return res.json(movies_india)
+})
 
 app.get("/data", async(req,res)=>{
     const token = req.headers.authorization
@@ -34,4 +37,5 @@ app.use(cors());
 app.use(express.json())
 app.use("/user",router);
 app.use("/book", bookRouter);
+
 app.listen(PORT,()=>console.log(`Server Started At PORT: ${PORT}`))

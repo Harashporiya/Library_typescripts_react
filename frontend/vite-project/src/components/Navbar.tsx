@@ -40,6 +40,7 @@ function Navbar() {
           <Link to="/login" className="text-gray-300 text-2xl hover:text-white">{userData.name ? userData.name : 'Login'}</Link>
           <Link to="/BookShow" className="text-gray-300 text-2xl hover:text-white">Home</Link>
           <Link to="/BookAdd" className="text-gray-300 text-2xl hover:text-white">Add Book</Link>
+          <Link to="/movies" className="text-gray-300 text-2xl hover:text-white">Movies</Link>
         </div>
       </nav>
     </div>

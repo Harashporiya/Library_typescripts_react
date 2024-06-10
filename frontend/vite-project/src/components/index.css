@@ -1,0 +1,10 @@
+.custom-select {
+    background-color: transparent;
+    color: inherit; 
+    border: none; 
+    appearance: none; 
+}
+
+.custom-select:focus {
+    outline: none;
+}
