@@ -48,8 +48,8 @@ function BookShow() {
                                         <p className="text-gray-300">{book.authorName}</p>
                                     </div>
                                     <div>
-                                        <button 
-                                            onClick={() => handleDelete(book._id)} 
+                                        <button
+                                            onClick={() => handleDelete(book._id)}
                                             className='bg-red-600 p-4 rounded-xl text-white'>
                                             Delete
                                         </button>

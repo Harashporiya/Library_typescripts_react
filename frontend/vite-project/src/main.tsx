@@ -5,7 +5,7 @@ import './index.css'
 import Route from './components/Route'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-   
-   <Route/>
+
+    <Route />
   </React.StrictMode>,
 )

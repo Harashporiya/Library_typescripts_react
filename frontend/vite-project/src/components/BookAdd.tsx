@@ -16,10 +16,10 @@ const BookAdd: React.FC = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        
+
         try {
             const token = Cookies.get("authorization");
-          
+
 
             const response = await axios.post("http://localhost:7000/book/add-new", {
                 bookName,
@@ -43,8 +43,8 @@ const BookAdd: React.FC = () => {
         const fetchData = async () => {
             try {
                 const token = Cookies.get("authorization");
-            
-               console.log(token)
+
+                console.log(token)
                 const response = await axios.get("http://localhost:7000/data", {
                     headers: { authorization: token },
                 });

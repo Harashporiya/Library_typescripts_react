@@ -128,5 +128,29 @@
         "description": "The Warrens investigate a murder that may be linked to a demonic possession.",
         "lead_actors": ["Patrick Wilson", "Vera Farmiga", "Ruairi O'Connor"],
         "poster_image": "https://image.tmdb.org/t/p/original/6fXOKizBpQBCxRZMU1AWYHObFRk.jpg"
-    }
+    },
+    {
+        "_id": "65e0f6b297def1738ce8b2d9",
+        "ID": 1,
+        "title": "The Sixth Sense",
+        "director": "M. Night Shyamalan",
+        "release_date": "August 6, 1999",
+        "Genre": ["Thriller", "Mystery", "Drama"],
+        "rating": 8.1,
+        "description": "A young boy who communicates with spirits seeks the help of a disheartened child psychologist.",
+        "Lead_Actors": ["Bruce Willis", "Haley Joel Osment"],
+        "poster_image": "https://alternativemovieposters.com/wp-content/uploads/2023/10/John-Hanley_SixthSense.jpg"
+      },
+      {
+        "_id": "65e0f6b297def1738ce8b2df",
+        "ID": 7,
+        "title": "Ghostbusters",
+        "director": "Ivan Reitman",
+        "release_date": "June 8, 1984",
+        "Genre": ["Comedy", "Fantasy"],
+        "rating": 7.8,
+        "description": "Three former parapsychology professors set up shop as a unique ghost removal service.",
+        "Lead_Actors": ["Bill Murray", "Dan Aykroyd"],
+        "poster_image": "https://upload.wikimedia.org/wikipedia/en/2/2f/Ghostbusters_%281984%29_theatrical_poster.png"
+      }
 ]

@@ -5,7 +5,7 @@ import axios from 'axios';
 
 interface UserData {
   name?: string;
- 
+
 }
 
 function Navbar() {
@@ -15,7 +15,7 @@ function Navbar() {
   useEffect(() => {
     const fetchData = async () => {
       const token = Cookies.get("authorization");
-      
+
       try {
         const response = await axios.get("http://localhost:7000/data", {
           headers: { authorization: token },
