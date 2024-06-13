@@ -9,6 +9,8 @@ import Navbar from './Navbar';
 import MoviesIndia from './MoviesIndia';
 import MoviesGhost from './MoviesGhost';
 import Movies from './Movies';
+import AddIndiaMovie from './AddIndiaMovie';
+import AddhollwodsMovies from './AddhollwodsMovies';
 
 function AppRoutes() {
   return (
@@ -23,6 +25,8 @@ function AppRoutes() {
         <Route path='movies' element={<Movies />} />
         <Route path='/indiamovies' element={<MoviesIndia />} />
         <Route path='/ghost' element={<MoviesGhost />} />
+        <Route path='/addIndia' element={<AddIndiaMovie/>}/>
+        <Route path='/addghost' element={<AddhollwodsMovies/>}/>
       </Routes>
     </BrowserRouter>
   );
