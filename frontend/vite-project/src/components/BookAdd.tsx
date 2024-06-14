@@ -63,7 +63,7 @@ const BookAdd: React.FC = () => {
     return (
         <>
             <Navbar />
-            <div className="bg-gray-800 min-h-screen flex items-center justify-center p-9">
+            <div className="bg-gray-900 min-h-screen flex items-center justify-center p-9">
                 <form onSubmit={handleSubmit} className="bg-blue-700 p-9 rounded-2xl space-y-4">
                     <h1 className="text-white text-2xl mb-4">Add New Book</h1>
                     <div>

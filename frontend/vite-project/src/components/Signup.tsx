@@ -34,7 +34,7 @@ function Signup() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-800 max-h-screen min-h-screen flex items-center justify-center">
+      <div className="bg-gray-900 max-h-screen min-h-screen flex items-center justify-center">
         <div className="max-w-md w-full bg-blue-400 p-6 mb-28 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-4">Signup</h2>
           <form onSubmit={handleSubmit}>
